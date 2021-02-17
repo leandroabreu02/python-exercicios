@@ -2,10 +2,20 @@
 n = 0
 pergunta = ''
 soma = 0
+maior = 0
+menor = 0
 numero_de_perguntas = 0
 while pergunta != 'n':
   n = int(input('Digite um valor: '))
-  pergunta = input('Quer continuar? [s/n]').lower()
+  pergunta = input('Quer continuar? [s/n] ').lower()
   numero_de_perguntas += 1
   soma += n
-print('A média foi {:.2f}'.format(soma / numero_de_perguntas))
+  if numero_de_perguntas == 1:
+    maior = menor = n
+  else:
+    if n > maior:
+      maior = n
+    if n < menor:
+      menor = n
+print('Você digitou {} números e a média foi {:.2f}'.format(numero_de_perguntas, soma / numero_de_perguntas))
+print('O maior valor foi {} e o menor for {}'.format(maior, menor))

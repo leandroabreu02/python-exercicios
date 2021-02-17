@@ -2,8 +2,9 @@
 n = 0
 soma = 0
 quantidade = 0
+n = int(input('Digite um valor: '))
 while n != 999:
-  n = int(input('Digite um valor: '))
   soma += n
   quantidade += 1
-print('Foram digitados {} valores e a soma entre eles é igual a {}'.format(quantidade - 1, soma - 999))
+  n = int(input('Digite um valor: '))
+print('Foram digitados {} valores e a soma entre eles é igual a {}'.format(quantidade, soma))

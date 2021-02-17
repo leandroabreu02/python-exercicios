@@ -1,11 +1,18 @@
 # Melhore o desafio 061, perguntando para o usuário se ele quer mostra mais alguns termos. O programa encerra quando ele disser que quer mostrar os termos
-
-
-primeiro_termo = int(input('Qual o primeiro termo? '))
-razao = int(input('Qual a razão? '))
-termo = 0
-n = 0
-while termo < 10:
-  print('{}'.format(primeiro_termo + n * razao), end=' ')
-  termo += 1
-  n += 1
+print('Gerador de PA')
+print('-=' * 10)
+primeiro = int(input('Primeiro termo: '))
+razao = int(input('Razão: '))
+termo = primeiro
+cont = 1
+total = 0
+mais = 10
+while mais != 0:
+  total = total + mais
+  while cont <= total:
+    print('{} -> '.format(termo), end=' ')
+    termo += razao
+    cont += 1
+  print('PAUSA')
+  mais = int(input('Quantos termos você quer mostrar a mais? '))
+print('Progressão finalizada com {} termos'.format(total))
