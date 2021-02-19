@@ -13,6 +13,7 @@ numero_vitorias = 0
 while True:
   n = int(input('Digite um valor: '))                       # eu digito um valor
   par_ou_impar = str(input('Par ou ímpar? [p/i]')).lower()     # digo se é par ou impar a soma
+  soma = n + numero_pc
   print(f'{soma} = {n} + {numero_pc}')
   
   if soma % 2 == 0:
